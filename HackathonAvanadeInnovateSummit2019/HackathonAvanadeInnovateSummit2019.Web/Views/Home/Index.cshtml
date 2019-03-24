@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem vindo</h1>
+    <p><a href="#"> Centro da melhor jornada e experiência de um colaborador.</a></p>
+</div>
+
+
+
+
+<head>
+    <title>Pie Chart</title>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script src="../../../dist/2.8.0/Chart.min.js"></script>
+    <script src="../utils.js"></script>
+    <style type="text/css">
+        /frames chartjs-render-animation {
+            from
+
+        {
+            opacity: .99
+        }
+
+        to {
+            opacity: 1
+        }
+
+        }
+
+        .chartjs-render-monitor {
+            animation: chartjs-render-animation 1ms
+        }
+
+        .chartjs-size-monitor, .chartjs-size-monitor-expand, .chartjs-size-monitor-shrink {
+            position: absolute;
+            direction: ltr;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: -1
+        }
+
+            .chartjs-size-monitor-expand > div {
+                position: absolute;
+                width: 1000000px;
+                height: 1000000px;
+                left: 0;
+                top: 0
+            }
+
+            .chartjs-size-monitor-shrink > div {
+                position: absolute;
+                width: 200%;
+                height: 200%;
+                left: 0;
+                top: 0
+            }
+    </style>
+</head>
+
+<div id="canvas-holder" style="width:90%">
+    <div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+    <canvas id="chart-area" style="display: block; width: 755px; height: 377px;" width="755" height="377" class="chartjs-render-monitor"></canvas>
+</div>
